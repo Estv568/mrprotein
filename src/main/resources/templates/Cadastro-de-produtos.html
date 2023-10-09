@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Cadastro de Produtos Dropshipping</title>
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background-color: #f4f4f4;
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+        .container {
+
+            max-width: 600px;
+
+            margin: 20px auto;
+
+            padding: 20px;
+
+            background-color: #ffffff;
+
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+        h2 {
+
+            text-align: center;
+
+        }
+
+        label, input, select {
+
+            display: block;
+
+            margin-bottom: 10px;
+
+        }
+
+        label {
+
+            font-weight: bold;
+
+        }
+
+        input[type="text"], input[type="number"] {
+
+            width: 100%;
+
+            padding: 10px;
+
+        }
+
+        select {
+
+            width: 100%;
+
+            padding: 10px;
+
+        }
+
+        button {
+
+            background-color: #007BFF;
+
+            color: #fff;
+
+            border: none;
+
+            padding: 10px 20px;
+
+            cursor: pointer;
+
+        }
+
+        button:hover {
+
+            background-color: #0056b3;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Cadastro de Produtos</h2>
+
+        <form   th:object="${produto}" th:action="@{/mrprotein/produto/add-produto}" method="post">
+
+            <label for="nome">Nome do Produto:</label>
+
+            <input type="text" id="nome" th:field="*{nome}" required>
+
+ 
+
+            <label for="preco">Preço</label>
+
+            <input type="number" id="preco" th:field="*{preco}" required>
+
+ 
+         <label for="categoria">Categoria:</label>
+
+            <select id="categoria" th:field="*{categoria}" required>
+
+                <option value="eletronico">whey</option>
+
+                <option value="vestuario">creatina</option>
+            </select>
+
+ 
+
+            <label for="fornecedor">Descrição:</label>
+
+            <textarea id="w3review" th:field="*{descricao}" rows="4" cols="50">Descriçao do produto</textarea>
+ </br>
+
+           
+ 
+
+            <input type="submit" value="Cadastrar produtos">
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
