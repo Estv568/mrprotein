@@ -87,8 +87,8 @@ body{
 
 #f{
     position: relative;
-    left: 120px;
-    top: 10px;
+    left: 150px;
+    top: -0px;
 }
 .m {
     position: relative;
@@ -279,3 +279,266 @@ body{
     left: 5px;
     transform: rotate(-405deg);
   }
+
+
+
+  .loader {
+    position: relative;
+  }
+  
+  .loader span {
+    position: absolute;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    font-size: 38px;
+    letter-spacing: 5px;
+  }
+  
+  .loader span:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 0.3px rgb(128, 198, 255);
+  }
+  
+  .loader span:nth-child(2) {
+    color: rgb(128, 198, 255);
+    -webkit-text-stroke: 1px rgb(128, 198, 255);
+    animation: uiverse723 3s ease-in-out infinite;
+  }
+  
+   /*mrprotein*/
+  @keyframes uiverse723 {
+    0%, 100% {
+      clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 
+       54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+    }
+  
+    50% {
+      clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 
+       51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    }
+  }
+
+  /*quadrado brqanco*/
+  div.um {
+    line-height:0;
+    width:30px;
+    height:0;
+    border-style: solid;
+    border-color:#E1E1E1;
+    border-width: 40px 76px 120px;
+    border-radius: 16px;
+    position: relative;
+    top: 33px;
+    left: 500px;
+    }
+  /*quadrado brqanco 2*/
+    div.dois {
+      line-height:0;
+      width:30px;
+      height:0;
+      border-style: solid;
+      border-color:#E1E1E1;
+      border-width: 40px 76px 120px;
+      border-radius: 16px;
+      position: relative;
+      top: -130px;
+      left: -500px;
+      }  
+  /*quadrado brqanco3*/
+      div.tres {
+        line-height:0;
+        width:30px;
+        height:0;
+        border-style: solid;
+        border-color:#E1E1E1;
+        border-width: 40px 76px 120px;
+        border-radius: 16px;
+        position: relative;
+        top: -287px;
+        left: -240px;
+        }
+
+         /*quadrado brqanco 4*/
+
+         div.qua {
+        line-height:0;
+        width:30px;
+        height:0;
+        border-style: solid;
+        border-color:#E1E1E1;
+        border-width: 40px 76px 120px;
+        border-radius: 16px;
+        position: relative;
+        top: -447px;
+        left: 240px;
+        }
+
+        /*estrelas 1*/
+        .rating{
+          position: relative;
+          left: -199px;
+        }
+        .rating:not(:checked) > input {
+          position: absolute;
+          appearance: none;
+        }
+        
+        .rating:not(:checked) > label {
+          float: right;
+          cursor: pointer;
+          font-size: 30px;
+          color: #eda60d;
+        }
+        
+        .rating:not(:checked) > label:before {
+          content: '★';
+        }
+        
+    
+        
+        .rating > input:checked ~ label {
+          color: #ffa723;
+        }
+        
+        
+        /*estrelas 2*/
+        .rating2{
+          position: relative;
+          left: -1200px;
+          top: -164px;
+        }
+        .rating2:not(:checked) > input {
+          position: absolute;
+          appearance: none;
+        }
+        
+        .rating2:not(:checked) > label {
+          float: right;
+          cursor: pointer;
+          font-size: 30px;
+          color: #666;
+        }
+        
+        .rating2:not(:checked) > label:before {
+          content: '★';
+        }
+        
+        .rating2 > input:checked + label:hover,
+        .rating2 > input:checked + label:hover ~ label,
+        .rating2 > input:checked ~ label:hover,
+        .rating2 > input:checked ~ label:hover ~ label,
+        .rating2 > label:hover ~ input:checked ~ label {
+          color: #df9711;
+        }
+        
+        .rating2:not(:checked) > label:hover,
+        .rating2:not(:checked) > label:hover ~ label {
+          color: #ff9e0b;
+        }
+        
+        .rating2 > input:checked ~ label {
+          color: #ffa723;
+        }
+        
+        /*estrelas 3*/
+        .rating3{
+          position: relative;
+          left: -935px;
+          top: -320px;
+        }
+        .rating3:not(:checked) > input {
+          position: absolute;
+          appearance: none;
+        }
+        
+        .rating3:not(:checked) > label {
+          float: right;
+          cursor: pointer;
+          font-size: 30px;
+          color: #666;
+        }
+        
+        .rating3:not(:checked) > label:before {
+          content: '★';
+        }
+        
+        .rating3 > input:checked + label:hover,
+        .rating3 > input:checked + label:hover ~ label,
+        .rating3 > input:checked ~ label:hover,
+        .rating3 > input:checked ~ label:hover ~ label,
+        .rating3 > label:hover ~ input:checked ~ label {
+          color: #e58e09;
+        }
+        
+        .rating3:not(:checked) > label:hover,
+        .rating3:not(:checked) > label:hover ~ label {
+          color: #ff9e0b;
+        }
+        
+        .rating3 > input:checked ~ label {
+          color: #ffa723;
+        }
+        
+        /*estrelas 4*/
+        .rating4{
+          position: relative;
+          left: -460px;
+          top: -480px;
+        }
+        .rating4:not(:checked) > input {
+          position: absolute;
+          appearance: none;
+        }
+        
+        .rating4:not(:checked) > label {
+          float: right;
+          cursor: pointer;
+          font-size: 30px;
+          color: #666;
+        }
+        
+        .rating4:not(:checked) > label:before {
+          content: '★';
+        }
+        
+        .rating4 > input:checked + label:hover,
+        .rating4 > input:checked + label:hover ~ label,
+        .rating4 > input:checked ~ label:hover,
+        .rating4 > input:checked ~ label:hover ~ label,
+        .rating4 > label:hover ~ input:checked ~ label {
+          color: #e58e09;
+        }
+        
+        .rating4:not(:checked) > label:hover,
+        .rating4:not(:checked) > label:hover ~ label {
+          color: #ff9e0b;
+        }
+        
+        .rating4 > input:checked ~ label {
+          color: #ffa723;
+        }
+        /*imagens*/
+        #im1{
+          position: relative;
+          top: -6px;
+          width: 100px;
+          left: -48px;
+
+        }
+        
+        #im2{
+          position: relative;
+          top: -6px;
+          width: 100px;
+          left: -48px;
+
+        }
+        
+        #im3{
+          position: relative;
+          top: -6px;
+          width: 90px;
+          left: -48px;
+
+        }
+        

@@ -1,10 +1,15 @@
 package com.itb.suplementos.mrprotein2g.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import com.itb.suplementos.mrprotein2g.enums.EnumatProd;
 
 
 @Entity
@@ -16,15 +21,30 @@ public class Produto {
     @GeneratedValue(strategy = GenerationType.IDENTITY) //auto-incremento
 	private Long Id;
   
-	private String  categoria;
     private String  nome;
     private String  descricao;
-    private double  preco;
-    private boolean codStatusProduto;
-    
+    //private String imagen;
+  
+    @Column (columnDefinition = "VARBINARY(max)")
+    private double  preco;    
+    private byte[] imagen;    
+
+    @Enumerated(EnumType.STRING)    
+	private EnumatProd  categoriaProd;
+
+    private String codStatusProduto;  
      // setter e getters
 
-    public Long getId() {
+
+	public byte[] getImagen() {
+		return imagen;
+	}
+
+	public void setImagen(byte[] imagen) {
+		this.imagen = imagen;
+	}
+
+	public Long getId() {
 		return Id;
 	}
 	
@@ -37,15 +57,16 @@ public class Produto {
 	
 	
 
-	public String getCategoria() {
-		return categoria;
-	}
-
-	public void setCategoria(String categoria) {
-		this.categoria = categoria;
-	}
 
 	
+	public EnumatProd getCategoriaProd() {
+		return categoriaProd;
+	}
+
+	public void setCategoriaProd(EnumatProd categoriaProd) {
+		this.categoriaProd = categoriaProd;
+	}
+
 	public String getNome() 
 	{
 		return nome;
@@ -75,16 +96,15 @@ public class Produto {
 	{
 		this.preco = preco;
 	}
-	
-	public boolean getCodStatusProduto() 
-	{
+
+	public String getCodStatusProduto() {
 		return codStatusProduto;
 	}
-	
-	public void setCodStatusProduto(boolean codStatusProduto) 
-	{
+
+	public void setCodStatusProduto(String codStatusProduto) {
 		this.codStatusProduto = codStatusProduto;
 	}
-    
+	
+	
         
 }
